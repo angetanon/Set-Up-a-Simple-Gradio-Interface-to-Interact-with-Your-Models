@@ -12,8 +12,8 @@ if not os.environ.get("OPENAI_API_KEY", "").strip():
 
 llm = ChatOpenAI(
     model="gpt-4o-mini",
-    max_tokens=256,
-    temperature=0.5,
+    max_tokens=256, # Limit the maximum number of tokens in the response
+    temperature=0.5, # Control the randomness of the response (0.0 = deterministic, 1.0 = very random)
 )
 
 
